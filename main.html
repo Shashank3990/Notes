@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Notes</h1>
+        <div class="header-controls">
+            <div class="view-controls">
+                <button id="single-column-btn" class="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </button>
+                <button id="multi-column-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><path d="M3 3h7v7H3z"></path><path d="M14 3h7v7h-7z"></path><path d="M14 14h7v7h-7z"></path><path d="M3 14h7v7H3z"></path></svg>
+                </button>
+                <button id="install-button" style="display: none;">Install app</button>
+            </div>
+            <div class="background-selector-container">
+                <label for="background-select">Background:</label>
+                <select id="background-select">
+                    <option value="none">None</option>
+                    <option value="bg1">Image 1</option>
+                    <option value="bg2">Image 2</option>
+                    <option value="bg3">Image 3</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="notes-container" class="single-column"></div>
+        <form id="note-form">
+            <textarea id="note-input" placeholder="Write a new note..." required></textarea>
+            <button type="submit">Add Note</button>
+        </form>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
